@@ -1,12 +1,11 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import { LandingPage } from "./pages/LandingPage"
-import { DrinksDetail } from "./pages/DrinksDetail"
-//import { useState } from 'react'
+import { DrinkDetails } from "./pages/DrinkDetails"
+
 
 import './App.css'
 
 export const App = () => {
-  //const [count, setCount] = useState(0)
 
   return (
     <>
@@ -19,7 +18,7 @@ export const App = () => {
 
     <Routes>
       <Route path = "/" element = {<LandingPage/>} /> 
-      <Route path = "/tragos/:tragosId" element = { <DrinksDetail/> } />      
+      <Route path = "/tragos/:tragosId" element = { <DrinkDetails/> } />      
     </Routes>
 
     </BrowserRouter>

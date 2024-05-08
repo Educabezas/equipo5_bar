@@ -1,7 +1,7 @@
 import {DrinkCard} from "./DrinkCard"
 import {get} from "../utils/conexionAPI"
 import {useState, useEffect} from "react"
-
+import "../assets/css/DrinksGrid.css"
 
 export const DrinksGrid = () => {
 
