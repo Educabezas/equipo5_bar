@@ -1,6 +1,7 @@
 import { get } from "../utils/conexionDetailsAPI"
 import { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
+import "../assets/css/DrinkRecipe.css"
 
 //Me falta q tome el ID para que al hacer click en la foto muestre la receta
 export const DrinkRecipe = () => {
@@ -20,10 +21,10 @@ export const DrinkRecipe = () => {
         )
 }
 return(
-    <div>
-        <p>Tipo de trago: {recipe.map((drinks)=>drinks.strCategory)}</p> 
-            {recipe.map((drinks)=>drinks.strInstructions)}
-        <p>Ingredientes: {recipe.map((drinks)=>drinks.strIngredient1)}, {recipe.map((drinks)=>drinks.strIngredient2)},  {recipe.map((drinks)=>drinks.strIngredient3)} </p>
+    <div className="recipe">
+        <p className="drinkCategory">Tipo de trago: {recipe.map((drinks)=>drinks.strCategory)}</p> 
+        <p className="drinkRecipe"> {recipe.map((drinks)=>drinks.strInstructions)}</p>   
+        <p className="drinkIngredients">Ingredientes: {recipe.map((drinks)=>drinks.strIngredient1)}, {recipe.map((drinks)=>drinks.strIngredient2)},  {recipe.map((drinks)=>drinks.strIngredient3)} </p>
         <Link to = "/">
         <img src={recipe.map((drinks)=>drinks.strDrinkThumb)} alt={recipe.map((drinks)=>drinks.strCategory)} />
         </Link>        
