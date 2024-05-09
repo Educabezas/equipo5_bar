@@ -1,33 +1,32 @@
 import { get } from "../utils/conexionDetailsAPI"
 import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 
-export const DrinkDetails = () => {
-    
-    const [drinks, setDrinks] = useState (null)
+export const DrinkDetails = () => {    
+    const [drink, setDrinks] = useState(null)
     const {tragosId} = useParams()
         
     useEffect(()=>{
-        get(`${tragosId}`).then((data)=>{
-         
-            console.log(data.drinks)
+        get(`${tragosId}`).then((data)=>{ 
             setDrinks(data.drinks)
-        })
-    }), [tragosId]
-
-    if(!drinks){
+        })    
+    }, [tragosId])    
+    if(!drink){        
         return (
-            "Algo raro pasa"
-        )
+            "Algo raro pasa..."
+        )        
     }
 
-    return(
+    return(        
         <div className="detail">
-        <img className="imgDrink" src={strDrinkThumb} alt="No me trae la img" />
-            <div className="drinkDetail">
-                <p className="drink">
-                    Nombre e Info del trago  
-                </p>
+            <Link to = {`/receta/${drink.map((drinks)=>drinks.idDrink)}`} >
+            <img src = {drink.map((drinks)=>drinks.strDrinkThumb)} alt={drink.map((drinks)=>drinks.strCategory)} className="drinkImg"/>
+            </Link>                         
+            <div className="drinkDetail">            
+                <div className="drink">                    
+                    <h2 className="drinkName">{drink.map((drinks)=>drinks.strDrink)}</h2>
+                    <p>Ingrediente principal: {drink.map((drinks)=>drinks.strIngredient1)}</p>
+                    <p>{drink.map((drinks)=>drinks.strAlcoholic)}</p></div>
             </div>
         </div>
     )

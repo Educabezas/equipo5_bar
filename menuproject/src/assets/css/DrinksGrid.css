@@ -8,7 +8,7 @@
 }
 
 @media (max-width: 560px){
-    .peliculasGrid{
+    .drinksGrid{
         grid-template-columns: 100%;
     }
 }
