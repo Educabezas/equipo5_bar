@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom"
 //ESTO TRAE EL ARRAY PERO NO MUESTRA NADAAAAAAAAAAAAA
 export const DrinkDetails = () => {
     
-    const [drinks, setDrinks] = useState (null)
+    const [drink, setDrinks] = useState (null)
     const {tragosId} = useParams()
         
     useEffect(()=>{
@@ -14,20 +14,22 @@ export const DrinkDetails = () => {
             console.log(data.drinks)
             setDrinks(data.drinks)
         })
-    }), [tragosId]
+    }, [tragosId])//Ver ()
 
-    if(!drinks){
+    if(!drink){
         return (
-            "Algo raro pasa"
+            "Algo raro pasa..."
         )
     }
 
     return(
+        
         <div className="detail">
-        <img className="imgDrink" src={strDrinkThumb} alt="No me trae la img" />
+            <img src={drink.strDrinkThumb} alt="Error al cargar img" />
+     
             <div className="drinkDetail">
                 <p className="drink">
-                    Nombre e Info del trago  
+                    Nombre e Info del taaarago  
                 </p>
             </div>
         </div>
