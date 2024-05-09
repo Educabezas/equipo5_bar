@@ -12,7 +12,6 @@ get().then((data) => {
     console.log(data.drinks)
     setDrinks(data.drinks)
 })
-
 }, [])
 
 return(
@@ -22,5 +21,4 @@ return(
         ))}
     </ul>
 )
-
 }

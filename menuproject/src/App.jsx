@@ -3,12 +3,9 @@ import { LandingPage } from "./pages/LandingPage"
 import { DrinkDetails } from "./pages/DrinkDetails"
 import { DrinkRecipe } from "./pages/DrinkRecipe"
 import {Taaaragos} from "./pages/Taaaragos"
-
-
 import './App.css'
 
 export const App = () => {
-
   return (
     <>
     <BrowserRouter>
