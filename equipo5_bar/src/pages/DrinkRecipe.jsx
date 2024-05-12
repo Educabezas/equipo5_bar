@@ -22,11 +22,13 @@ export const DrinkRecipe = () => {
 }
 return(
     <div className="recipe">
+        <div className="recipeText">
         <p className="drinkCategory">Tipo de trago: {recipe.map((drinks)=>drinks.strCategory)}</p> 
         <p className="drinkRecipe"> {recipe.map((drinks)=>drinks.strInstructions)}</p>   
         <p className="drinkIngredients">Ingredientes: {recipe.map((drinks)=>drinks.strIngredient1)}, {recipe.map((drinks)=>drinks.strIngredient2)},  {recipe.map((drinks)=>drinks.strIngredient3)} </p>
-        <Link to = "/">
-        <img src={recipe.map((drinks)=>drinks.strDrinkThumb)} alt={recipe.map((drinks)=>drinks.strCategory)} />
+        </div>
+        <Link to = "/" className="drinkRecipeImg">
+        <img className="drinkRecipeImg" src={recipe.map((drinks)=>drinks.strDrinkThumb)} alt={recipe.map((drinks)=>drinks.strCategory)} />
         </Link>        
     </div>    
 )
