@@ -12,8 +12,16 @@
 }
 .recipe{
     font-family: Amatic SC, Roboto, serif;
-    line-height: 1;
+    line-height: 0.5;
     font-weight: 400;
     font-size: larger;
     text-align: center;
+}
+.recipeText{
+}
+.drinkRecipeImg{
+    width: 20rem;
+}
+.drinkRecipe{
+    font-size: 2rem;
 }

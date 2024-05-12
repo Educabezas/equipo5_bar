@@ -4,12 +4,12 @@
 .drinksGrid{
     font-family: Amatic Sc, Roboto, serif;
     line-height: 1;
-    background-color: rgb(233, 179, 118);
+    background-color: #3d1d1d;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     gap: 2rem;
-    padding: 2rem;
+    padding: 0rem;
     justify-content: center;    
 }
 
