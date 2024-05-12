@@ -27,7 +27,7 @@ return(
         <p className="drinkRecipe"> {recipe.map((drinks)=>drinks.strInstructions)}</p>   
         <p className="drinkIngredients">Ingredientes: {recipe.map((drinks)=>drinks.strIngredient1)}, {recipe.map((drinks)=>drinks.strIngredient2)},  {recipe.map((drinks)=>drinks.strIngredient3)} </p>
         </div>
-        <Link to = "/CaCReact.CocktailsDBProject" className="drinkRecipeImg">
+        <Link to = "/equipo5_bar" className="drinkRecipeImg">
         <img className="drinkRecipeImg" src={recipe.map((drinks)=>drinks.strDrinkThumb)} alt={recipe.map((drinks)=>drinks.strCategory)} />
         </Link>        
     </div>    
